@@ -14,9 +14,15 @@
   ```
   
   *安装X-UI
+  原版：（暂停维护）
   ```shell
   bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
   ```
+  新版：
+  ```shell
+  bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
+  ```
+  
   安装过程中选择Y，输入自定义用户名、密码、端口
   
   *安装Nginx
