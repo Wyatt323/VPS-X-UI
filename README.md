@@ -149,11 +149,28 @@ http {
 }
   ```
   每次修改nginx配置文件后必须使用 systemctl reload nginx 命令重新加载配置文件
- 
+   ```shell
+   systemctl reload nginx
+  ```
+  
  添加节点到v2中，修改节点：
  端口——>443
  加密方式——>zero
  打开TLS
 
  如需导入到手机或者openwrt中使用，请分享V2中修改过的节点连接，这样就不需要在别的客户端修改了
+ 
+ 多用户
+  ```shell
+        location /ray {   #分流路径
+            proxy_redirect off;
+            proxy_pass http://127.0.0.1:10000; #Xray端口
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+  ```
  
