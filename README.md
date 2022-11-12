@@ -27,7 +27,7 @@
   
   *安装Nginx
   ```shell
-  apt install nginx
+  apt install -y nginx
   ```
   
   *安装acme：
